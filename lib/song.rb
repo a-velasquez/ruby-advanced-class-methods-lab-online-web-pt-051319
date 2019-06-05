@@ -37,9 +37,11 @@ class Song
     self.find_by_name(name) || self.create_by_name(name) #searches @@all using find_by_name method and if it finds it 
   end                                                    #it returns the value, || (or) if it's false invokes 
                                                          #create_by_name method to create the song 
+  
   def self.alphabetical
     @@all.sort_by{ |song| song.name }
   end
+
    
   def self.new_from_filename(name)
     song = self.new 
