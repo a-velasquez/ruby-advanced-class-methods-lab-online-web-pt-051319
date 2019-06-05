@@ -34,9 +34,9 @@ class Song
   end                                       #or nil if not present.
   
   def self.find_or_create_by_name(name)
-    self.find_by_name(name) || self.create_by_name(name) #searches @@all using find_by_name method and if it finds it 
-  end                                                    #it returns the value, || (or) if it's false invokes 
-                                                         #create_by_name method to create the song 
+    self.find_by_name(name) || self.create_by_name(name) #searches @@all using find_by_name method and if it finds it .it returns the value, || (or) if it's false it invokes create_by_name method to create the song 
+  end       
+                                              
   
   def self.alphabetical
     @@all.sort_by{ |song| song.name }
